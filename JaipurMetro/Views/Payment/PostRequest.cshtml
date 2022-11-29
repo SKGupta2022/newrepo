@@ -1,0 +1,26 @@
+﻿@model RPPSampleMVC.Models.PaymentRequest
+@{
+    Layout = null;
+}
+<script src="~/Script/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function (){
+            $('#payfrm').submit();
+        }
+     );
+</script>
+
+<form id="payfrm" name='form' action='http://uat.rpp.rajasthan.gov.in/payments/v1/init' method='post'>
+    <div style='float:left; width:100%; height:100%;'>
+        <div style='float:left; width:100%; height:100%; margin-top:10%;'>
+            <div style='float:left; width:100%; text-align:center; font-size:30px; color:#525252; margin:0 0 50px 0;'>
+                Please wait while you are being redirected to payment gateway.
+            </div>
+            <div style='float:left; width:100%; text-align:center;'>
+                <img src='/images/loading.gif' style="width:100px"/>
+            </div>
+            @Html.HiddenFor(model => model.MERCHANTCODE)
+            @Html.HiddenFor(model => model.ENCDATA)
+        </div>
+    </div>
+</form>

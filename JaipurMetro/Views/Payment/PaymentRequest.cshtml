@@ -1,0 +1,63 @@
+﻿@model RPPSampleMVC.Models.RequestDetails
+@{
+    Layout = null;
+}
+<fieldset>
+    <legend>Payment Request Details</legend>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <table>
+                <tr>
+                    <td>
+                        @Html.LabelFor(model => model.USERNAME, new { @class = "control-label col-md-2 required" })
+                    </td>
+                    <td>
+                        @Html.EditorFor(model => model.USERNAME, new { htmlAttributes = new { @class = "form-control", @title = ModelMetadata.FromLambdaExpression(model => model.USERNAME, ViewData).Description, @placeholder = ModelMetadata.FromLambdaExpression(model => model.USERNAME, ViewData).Watermark } })
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.LabelFor(model => model.USEREMAIL, new { @class = "control-label col-md-2" })
+                    </td>
+                    <td>
+                        @Html.EditorFor(model => model.USEREMAIL, new { htmlAttributes = new { @class = "form-control", @title = ModelMetadata.FromLambdaExpression(model => model.USEREMAIL, ViewData).Description, @placeholder = ModelMetadata.FromLambdaExpression(model => model.USEREMAIL, ViewData).Watermark } })
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.LabelFor(model => model.USERMOBILE, new { @class = "control-label col-md-2 required" })
+                    </td>
+                    <td>
+                        @Html.EditorFor(model => model.USERMOBILE, new { htmlAttributes = new { @class = "form-control", @title = ModelMetadata.FromLambdaExpression(model => model.USERMOBILE, ViewData).Description, @placeholder = ModelMetadata.FromLambdaExpression(model => model.USERMOBILE, ViewData).Watermark } })
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.LabelFor(model => model.AMOUNT, new { @class = "control-label col-md-2 required" })
+                    </td>
+                    <td>
+                        @Html.EditorFor(model => model.AMOUNT, new { htmlAttributes = new { @class = "form-control", @title = ModelMetadata.FromLambdaExpression(model => model.AMOUNT, ViewData).Description, @placeholder = ModelMetadata.FromLambdaExpression(model => model.AMOUNT, ViewData).Watermark } })
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.LabelFor(model => model.PURPOSE, new { @class = "control-label col-md-2 required" })
+                    </td>
+                    <td>
+                        @Html.EditorFor(model => model.PURPOSE, new { htmlAttributes = new { @class = "form-control", @title = ModelMetadata.FromLambdaExpression(model => model.PURPOSE, ViewData).Description, @placeholder = ModelMetadata.FromLambdaExpression(model => model.PURPOSE, ViewData).Watermark } })
+                    </td>
+                </tr>
+            </table>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default btn-primary" />
+                    @Html.ValidationSummary(true)
+                </div>
+            </div>
+        </div>
+    }
+
+</fieldset>

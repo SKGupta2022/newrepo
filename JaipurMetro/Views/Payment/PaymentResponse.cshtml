@@ -1,0 +1,70 @@
+﻿@model RPPSampleMVC.Models.PaymentResponse
+@{
+    Layout = null;
+}
+
+<div class="container-fluid mt_15">
+    <fieldset class="payment_response">
+        <legend>Payment Response</legend>
+        <div class="form-horizontal">
+            <table>
+                <tr>
+                    <td>
+                        @Html.LabelFor(model => model.STATUS, new { @class = "control-label col-lg-2 col-md-2 col-sm-3 col-xs-6" })
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.STATUS)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.LabelFor(model => model.ENCDATA, new { @class = "control-label col-lg-2 col-md-2 col-sm-3 col-xs-6" })
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.ENCDATA)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.LabelFor(model => model.RESPONSEJSON, new { @class = "control-label col-lg-2 col-md-2 col-sm-3 col-xs-6" })
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.RESPONSEJSON)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.LabelFor(model => model.CHECKSUMVALID, new { @class = "control-label col-lg-2 col-md-2 col-sm-3 col-xs-6" })
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.CHECKSUMVALID)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.LabelFor(model => model.RESPONSEPARAMETERS.PRN, new { @class = "control-label col-lg-2 col-md-2 col-sm-3 col-xs-6" })
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.RESPONSEPARAMETERS.PRN)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.LabelFor(model => model.RESPONSEPARAMETERS.CHECKSUM, new { @class = "control-label col-lg-2 col-md-2 col-sm-3 col-xs-6" })
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.RESPONSEPARAMETERS.CHECKSUM)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.LabelFor(model => model.RESPONSEPARAMETERS.RESPONSEMESSAGE, new { @class = "control-label col-lg-2 col-md-2 col-sm-3 col-xs-6" })
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.RESPONSEPARAMETERS.RESPONSEMESSAGE)
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </fieldset>
+</div>
